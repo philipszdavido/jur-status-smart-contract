@@ -6,7 +6,7 @@ This repo contains code for the __JurStatus__ contract.
 
 Make sure you have Nodejs installed in your machine.
 
-_1_ Install `truffle` and `ganache-cli` globally in your machine.
+__1__ - Install `truffle` and `ganache-cli` globally in your machine.
 
 ```sh
 yarn add global truffle
@@ -18,9 +18,9 @@ yarn add global ganache-cli
 npm i -g ganache-cli
 ```
 
-__2__ Pull or clone the repo.
+__2__ - Pull or clone the repo.
 
-__3__ Install dependencies.
+__3__ - Install dependencies.
 
 ```sh
 yarn install
@@ -32,13 +32,13 @@ or
 npm i
 ```
 
-__4__ Cd into the repo.
+__4__ - Cd into the repo.
 
 ```sh
 cd sm-contract
 ```
 
-__5__ Run `truffle develop`. This will spawn a `truffle develop` terminal.
+__5__ - Run `truffle develop`. This will spawn a `truffle develop` terminal.
 
 ```sh
 truffle(develop)>

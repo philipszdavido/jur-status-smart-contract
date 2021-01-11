@@ -55,6 +55,7 @@ contract JurStatus {
         require(_statusHolder != address(0), "Please provide a valid address.");
         status[_statusHolder] = Status(block.timestamp, true, statusTypes[_statusType]);
         statusCount++;
+        statusList.push(_statusHolder);
 
         emit StatusAdded(_statusHolder, block.timestamp, statusTypes[_statusType]);
     }

@@ -32,7 +32,7 @@ or
 npm i
 ```
 
-__4__ - Cd into the repo.
+__4__ - cd into the repo.
 
 ```sh
 cd sm-contract

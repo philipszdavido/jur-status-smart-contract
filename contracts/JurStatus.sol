@@ -24,6 +24,7 @@ contract JurStatus {
 
     /** Total count of Jur Statuses. */
     uint public statusCount;
+    address[] public statusList;
 
     event StateChanged(address statusHolder, bool newState, uint timestamp);
     event StatusAdded(address statusHolder, uint activationTime, string statusType);

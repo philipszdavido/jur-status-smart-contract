@@ -25,7 +25,7 @@ contract JurStatus {
 
     /** Total count of Jur Statuses. */
     uint public statusCount;
-    address[] public statusList;
+    Status[] public statusList;
 
     event StateChanged(address statusHolder, bool newState, uint timestamp);
     event StatusAdded(address statusHolder, uint activationTime, string statusType);
@@ -53,9 +53,10 @@ contract JurStatus {
     ) public
     onlyOwner {
         require(_statusHolder != address(0), "Please provide a valid address.");
-        status[_statusHolder] = Status(block.timestamp, true, statusTypes[_statusType]);
+        Status memory _newStatus = Status(block.timestamp, true, statusTypes[_statusType]);
+        status[_statusHolder] = _newStatus;
         statusCount++;
-        statusList.push(_statusHolder);
+        statusList.push(_newStatus);
 
         emit StatusAdded(_statusHolder, block.timestamp, statusTypes[_statusType]);
     }
@@ -95,7 +96,7 @@ contract JurStatus {
         return statusTypes;
     }
 
-    function getStatusList() external view returns (address[] memory) {
+    function getStatusList() external view returns (Status[] memory) {
         return statusList;
     }
 

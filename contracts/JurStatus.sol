@@ -90,4 +90,28 @@ contract JurStatus {
         require(bytes(_statusType).length != 0, "Status type cannot be an empty string.");
         statusTypes.push(_statusType);
     }
+
+    function getStatusTypes() external view returns (string[] memory) {
+        return statusTypes;
+    }
+
+    function getStatusList() external view returns (address[] memory) {
+        return statusList;
+    }
+
+    function getStatusCount() external view returns (uint) {
+        return statusCount;
+    }
+
+    function getJurStatusInfo(address _addr) external view returns (
+        uint activationTime,
+        bool isActive,
+        string memory statusType
+    ) {
+        return (
+            status[_addr].activationTime,
+            status[_addr].isActive,
+            status[_addr].statusType
+        );
+    }
 }

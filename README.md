@@ -1,6 +1,6 @@
 # JurStatus smart contract repo
 
-This repo contains code for the __JurStatus__ contarct.
+This repo contains code for the __JurStatus__ contract.
 
 ## How to run
 
